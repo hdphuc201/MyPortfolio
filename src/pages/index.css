@@ -1,0 +1,74 @@
+.avatar img {
+    transition: all 0.3s;
+}
+.avatar img:hover {
+    transition: all 0.3s;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.word-container {
+    display: flex;
+    align-items: center;
+}
+
+.word {
+    font-size: 100px;
+    font-weight: bold;
+    color: #dbdada;
+    margin: 0 10px;
+    position: relative;
+}
+
+.divider {
+    width: 100px;
+    height: 2px;
+    background-color: #dbdada;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.subtitle {
+    font-size: 50px;
+    font-weight: bold;
+    color: #dbdada;
+    margin-top: 20px;
+}
+
+.custom-cursor .hovered {
+    width: 100px;
+    height: 100px;
+}
+.hovered {
+    width: 100px;
+    height: 100px;
+}
+.viewall {
+    position: relative;
+  }
+  
+.viewall::before {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 1px;
+    background: #000;
+    right: 0;
+    bottom: -10px;
+    position: absolute;
+    transition: all 0.4s;
+  }
+  
+  .viewall::before:hover {
+    width: 100%;
+    right: 0;
+    transition: all 0.4s;
+  }
+  
