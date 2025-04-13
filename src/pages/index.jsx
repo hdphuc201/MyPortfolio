@@ -100,7 +100,7 @@ const Index = () => {
             title: 'E-Commerce',
             description:
                 'Developed a full-stack e-commerce platform with responsive UI and real-time backend integration. Implemented an admin dashboard with user, product, order, and discount management.',
-            image: '/src/assets/image/ecommerce.jfif',
+            image: '/image/ecommerce.jfif',
             url: 'https://hdpstore.vercel.app/',
             tags: ['ReactJS', 'Zustand', 'TailwindCSS', 'Mongodb', 'Nodejs']
         },
@@ -108,7 +108,7 @@ const Index = () => {
             title: 'Bna&Solution - Freelance',
             description:
                 'Developed a product, user, and order management system, improving customer UX. Collaborated with clients to customize UI based on requirements',
-            image: '/src/assets/image/bna.png',
+            image: '/image/bna.png',
             url: 'https://bnasolutions.com.vn/',
             tags: ['ReactJS', 'Zustand', 'TypeScript', 'TailwindCSS']
         },
@@ -116,7 +116,7 @@ const Index = () => {
             title: 'Gbox Studio',
             description:
                 'Designed an attractive and responsive user interface. Created smooth and innovative interactive effects.',
-            image: '/src/assets/image/gbox.jpg',
+            image: '/image/gbox.jpg',
             url: 'https://g-box.vercel.app/',
             tags: ['HTML', 'Sass', 'Jquery', 'GSAP', 'AOS']
         },
@@ -124,7 +124,7 @@ const Index = () => {
             title: 'Kymco',
             description:
                 'Designed an attractive and responsive user interface. Created smooth and innovative interactive effects.',
-            image: '/src/assets/image/kymco.png',
+            image: '/image/kymco.png',
             url: 'https://kymco.vercel.app/',
             tags: ['HTML', 'Sass', 'Jquery', 'GSAP', 'AOS']
         }
@@ -202,7 +202,7 @@ const Index = () => {
                                     }}
                                 >
                                     <img
-                                        src="/src/assets/image/avatar.jpg"
+                                        src="/image/avatar.jpg"
                                         alt="Avatar"
                                         style={{
                                             width: '100%',
