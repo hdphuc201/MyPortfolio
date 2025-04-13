@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
-import AnimatedCursor from '~/components/AnimatedCursor'
-import { FadeInText, GradientText, Typewriter } from '~/components/TextEffect'
+import { FadeInText, GradientText } from '~/components/TextEffect'
 import { HoverCard, MagneticButton, ButtonGlow } from '~/components/HoverEffect'
-import { FadeInSection, StaggeredReveal, ScrollProgress } from '~/components/ScrollEffect'
+import { FadeInSection, ScrollProgress } from '~/components/ScrollEffect'
 import { Parallax, MouseParallax } from '~/components/ParallaxEffect'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
@@ -130,11 +129,25 @@ const Index = () => {
         }
     ]
 
-    const handleDownload = (e) => {
-        e.preventDefault() // Ngừng hành động mặc định của sự kiện click
-
+    const fileCV = [
+        {
+            type: 'en',
+            text: 'Download CV English',
+            id: 1
+        },
+        {
+            type: 'vn',
+            id: 2,
+            text: 'Download CV Vietnamese'
+        }
+    ]
+    const handleDownload = (item) => {
+        console.log(item)
         // Đường dẫn đến file
-        const filePath = '/assets/files/HuynhDuyPhuc_CV_FrontendDeveloper.pdf'
+        const filePath =
+            item.type == 'en'
+                ? '/assets/files/HuynhDuyPhuc_FrontendDeveloper_CV.pdf'
+                : '/assets/files/HuynhDuyPhuc_FrontendDeveloper_CV_VN.pdf'
 
         // Fetch file từ server
         fetch(filePath)
@@ -235,12 +248,14 @@ const Index = () => {
                                 My goal is to become a Team Lead within the next 2-3 years, driving both technical
                                 excellence and team collaboration to deliver impactful products."
                             </p>
-                            <div className="mt-10">
-                                <div onClick={handleDownload}>
-                                    <MagneticButton className="bg-transparent border border-[#724a20] text-[#724a20] hover:bg-[#724a20] hover:text-white transition-colors">
-                                        Download CV
-                                    </MagneticButton>
-                                </div>
+                            <div className="flex mt-10 gap-10">
+                                {fileCV?.map((item) => (
+                                    <div onClick={() => handleDownload(item.type)}>
+                                        <MagneticButton className="bg-transparent border border-[#724a20] text-[#724a20] hover:bg-[#724a20] hover:text-white transition-colors">
+                                            {item?.text || ''}
+                                        </MagneticButton>
+                                    </div>
+                                ))}
                             </div>
                         </FadeInSection>
                     </EffectSection>
