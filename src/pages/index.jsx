@@ -67,8 +67,11 @@ const Index = () => {
     useGSAP(() => {
         const tl = gsap.timeline()
 
+        const isMobile = window.innerWidth <= 768
+        const startX = isMobile ? -200 : -600
+
         // Avatar animation xuất hiện từ trái
-        tl.fromTo(avatarRef.current, { x: -600, opacity: 0 }, { x: 0, opacity: 1, duration: 2.5, ease: 'power2.out' })
+        tl.fromTo(avatarRef.current, { x: startX, opacity: 0 }, { x: 0, opacity: 1, duration: 2.5, ease: 'power2.out' })
 
         // Chữ rơi xuống sau khi avatar xuất hiện
         tl.fromTo(
@@ -181,7 +184,7 @@ const Index = () => {
             <div className="homepage bg-[#000] h-full relative">
                 <div className="banner min-h-[100vh] z-[-1]">
                     <div className="flex items-center justify-between px-8 md:px-20 lg:px-60 w-full h-full pt-[10px]">
-                        <div className="title text-[70px] md:text-[120px] gap-2 font-bold mb-[100px] md:mb-[200px]">
+                        <div className="title text-[40px] md:text-[120px] gap-2 font-bold mb-0 md:mb-[200px]">
                             <div className="flex items-center tracking-normal">
                                 <p ref={titleRef} className="hover:text-[#724a20] transition-colors duration-300">
                                     FRONT
@@ -261,8 +264,6 @@ const Index = () => {
                     </EffectSection>
                 </div>
 
-                {/* Tab Navigation */}
-
                 <EffectSection
                     title="Technical Skills"
                     //   description="My journey and philosophy"
@@ -270,7 +271,7 @@ const Index = () => {
                 >
                     <div className="text-white px-4">
                         <div className="relative w-fit mx-auto mb-10 ">
-                            <div className="flex gap-8 border-b border-[#444]">
+                            <div className="flex gap-8 border-b border-[#444] flex-col md:flex-row">
                                 {categories.map((cat) => (
                                     <button
                                         key={cat}
@@ -291,7 +292,7 @@ const Index = () => {
                         </div>
                         {/* Tab Content */}
                         <AnimatePresence mode="wait">
-                            <div className="h-[300px]">
+                            <div className="h-full md:h-[300px]">
                                 <motion.div
                                     key={tab}
                                     initial={{ opacity: 0, y: 30 }}
