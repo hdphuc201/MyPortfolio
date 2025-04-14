@@ -120,7 +120,7 @@ const Index = () => {
                 'Designed an attractive and responsive user interface. Created smooth and innovative interactive effects.',
             image: '/image/gbox.jpg',
             url: 'https://g-box.vercel.app/',
-            tags: ['HTML', 'Sass', 'Jquery', 'GSAP', 'AOS']
+            tags: ['HTML', 'Sass', 'Jquery', 'GSAP', 'AOS', 'Photoshop']
         },
         {
             title: 'Kymco',
@@ -128,7 +128,7 @@ const Index = () => {
                 'Designed an attractive and responsive user interface. Created smooth and innovative interactive effects.',
             image: '/image/kymco.png',
             url: 'https://kymco.vercel.app/',
-            tags: ['HTML', 'Sass', 'Jquery', 'GSAP', 'AOS']
+            tags: ['HTML', 'Sass', 'Jquery', 'GSAP', 'AOS', 'Photoshop']
         }
     ]
 
