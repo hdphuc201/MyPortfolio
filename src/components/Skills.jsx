@@ -9,7 +9,8 @@ import {
     SiSass,
     SiMongodb,
     SiAdobephotoshop,
-    SiGnubash
+    SiGnubash,
+    SiExpress
 } from 'react-icons/si'
 import { MdAnimation } from 'react-icons/md'
 
@@ -30,7 +31,8 @@ const Skills = {
     ],
     Backend: [
         { name: 'Node.js', icon: <FaNodeJs color="#339933" /> },
-        { name: 'MongoDB', icon: <SiMongodb color="#47A248" /> }
+        { name: 'MongoDB', icon: <SiMongodb color="#47A248" /> },
+        { name: 'Express', icon: <SiExpress /> }
     ],
     Tools: [
         { name: 'Git', icon: <FaGitAlt color="#F05032" /> },

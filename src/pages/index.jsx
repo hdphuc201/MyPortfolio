@@ -400,14 +400,14 @@ const Index = () => {
                             ))}
                         </div>
 
-                        <div className="text-center mt-12">
+                        {/* <div className="text-center mt-12">
                             <ButtonGlow
                                 className="bg-[#724a20] border-none hover:bg-[#8d5c28]"
                                 glowColor="rgba(114, 74, 32, 0.6)"
                             >
                                 View All Projects
                             </ButtonGlow>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
