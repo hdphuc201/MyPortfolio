@@ -144,32 +144,27 @@ const Index = () => {
             text: 'Download CV Vietnamese'
         }
     ]
+
     const handleDownload = (item) => {
         console.log(item)
-        // Đường dẫn đến file
         const filePath =
             item.type == 'en'
                 ? '/assets/files/HuynhDuyPhuc_FrontendDeveloper_CV.pdf'
                 : '/assets/files/HuynhDuyPhuc_FrontendDeveloper_CV_VN.pdf'
 
-        // Fetch file từ server
         fetch(filePath)
             .then((response) => response.blob()) // Chuyển đổi tệp thành Blob
             .then((blob) => {
-                // Tạo URL tạm thời cho Blob
                 const url = window.URL.createObjectURL(blob)
 
-                // Tạo thẻ <a> ẩn để thực hiện tải file
                 const link = document.createElement('a')
                 link.href = url
                 link.download = 'HuynhDuyPhuc_CV_FrontendDeveloper.pdf' // Tên file khi tải về
-                link.style.display = 'none' // Ẩn link
+                link.style.display = 'none'
                 document.body.appendChild(link)
 
-                // Kích hoạt tải file
                 link.click()
 
-                // Xóa link và giải phóng URL tạm thời sau khi tải xong
                 document.body.removeChild(link)
                 window.URL.revokeObjectURL(url)
             })
@@ -180,7 +175,6 @@ const Index = () => {
         <div className="min-h-screen bg-black text-[#dbdada]">
             <ScrollProgress color="#724a20" />
 
-            {/* Hero Section with GSAP Animation */}
             <div className="homepage bg-[#000] h-full relative">
                 <div className="banner min-h-[100vh] z-[-1]">
                     <div className="flex items-center justify-between px-8 md:px-20 lg:px-60 w-full h-full pt-[10px]">
@@ -233,7 +227,6 @@ const Index = () => {
                     </div>
                 </div>
 
-                {/* About Me Section with Fade In Animation */}
                 <div className="text-left">
                     <EffectSection
                         title="About Me"
@@ -264,11 +257,7 @@ const Index = () => {
                     </EffectSection>
                 </div>
 
-                <EffectSection
-                    title="Technical Skills"
-                    //   description="My journey and philosophy"
-                    className="bg-black py-16 md:py-24 text-[20px]"
-                >
+                <EffectSection title="Technical Skills" className="bg-black py-16 md:py-24 text-[20px]">
                     <div className="text-white px-4">
                         <div className="relative w-fit mx-auto mb-10 ">
                             <div className="flex gap-8 border-b border-[#444] flex-col md:flex-row">
@@ -290,7 +279,6 @@ const Index = () => {
                                 ))}
                             </div>
                         </div>
-                        {/* Tab Content */}
                         <AnimatePresence mode="wait">
                             <div className="h-full md:h-[300px]">
                                 <motion.div
@@ -399,15 +387,6 @@ const Index = () => {
                                 </FadeInSection>
                             ))}
                         </div>
-
-                        {/* <div className="text-center mt-12">
-                            <ButtonGlow
-                                className="bg-[#724a20] border-none hover:bg-[#8d5c28]"
-                                glowColor="rgba(114, 74, 32, 0.6)"
-                            >
-                                View All Projects
-                            </ButtonGlow>
-                        </div> */}
                     </div>
                 </div>
 
