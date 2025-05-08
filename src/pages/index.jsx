@@ -106,14 +106,14 @@ const Index = () => {
             url: 'https://hdpstore.vercel.app/',
             tags: ['ReactJS', 'Zustand', 'TailwindCSS', 'Mongodb', 'Nodejs']
         },
-        {
-            title: 'Bna&Solution - Freelance',
-            description:
-                'Developed a product, user, and order management system, improving customer UX. Collaborated with clients to customize UI based on requirements',
-            image: '/image/bna.png',
-            url: 'https://bnasolutions.com.vn/',
-            tags: ['ReactJS', 'Zustand', 'TypeScript', 'TailwindCSS']
-        },
+        // {
+        //     title: 'Bna&Solution - Freelance',
+        //     description:
+        //         'Developed a product, user, and order management system, improving customer UX. Collaborated with clients to customize UI based on requirements',
+        //     image: '/image/bna.png',
+        //     url: 'https://bnasolutions.com.vn/',
+        //     tags: ['ReactJS', 'Zustand', 'TypeScript', 'TailwindCSS']
+        // },
         {
             title: 'Gbox Studio',
             description:
@@ -244,7 +244,7 @@ const Index = () => {
                                 My goal is to become a Team Lead within the next 2-3 years, driving both technical
                                 excellence and team collaboration to deliver impactful products."
                             </p>
-                            <div className="flex mt-10 gap-10">
+                          {/* <div className="flex mt-10 gap-10">
                                 {fileCV?.map((item) => (
                                     <div onClick={() => handleDownload(item.type)}>
                                         <MagneticButton className="bg-transparent border border-[#724a20] text-[#724a20] hover:bg-[#724a20] hover:text-white transition-colors">
@@ -252,7 +252,7 @@ const Index = () => {
                                         </MagneticButton>
                                     </div>
                                 ))}
-                            </div>
+                            </div> */}
                         </FadeInSection>
                     </EffectSection>
                 </div>
