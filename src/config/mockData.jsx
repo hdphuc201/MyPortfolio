@@ -1,4 +1,6 @@
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaFigma, FaNpm } from 'react-icons/fa'
+import { Github, Linkedin, Facebook } from 'lucide-react'
+
 import {
     SiTypescript,
     SiJquery,
@@ -14,7 +16,7 @@ import {
 } from 'react-icons/si'
 import { MdAnimation } from 'react-icons/md'
 
-const Skills = {
+export const Skills = {
     Frontend: [
         { name: 'HTML', icon: <FaHtml5 color="#E34F26" /> },
         { name: 'CSS', icon: <FaCss3Alt color="#1572B6" /> },
@@ -43,5 +45,30 @@ const Skills = {
         { name: 'NPM', icon: <FaNpm color="#CB3837" /> } // Thêm NPM vào danh sách công cụ
     ]
 }
+export const fileCV = [
+    {
+        type: 'en',
+        text: 'Download CV English',
+        id: 1
+    },
+    {
+        type: 'vn',
+        id: 2,
+        text: 'Download CV Vietnamese'
+    }
+]
 
-export default Skills
+export const information = [
+    {
+        href: 'https://www.linkedin.com/in/phuchuynhduy/',
+        icon: <Linkedin />
+    },
+    {
+        href: 'https://www.facebook.com/duyphuc3009',
+        icon: <Facebook/>
+    },
+    {
+        href: 'https://github.com/HuynhDuyPhuc201',
+        icon: <Github/>
+    }
+]

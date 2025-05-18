@@ -6,7 +6,7 @@ import { Suspense, useEffect, useRef, useState } from 'react'
 import './index.css'
 import useAppStore from './store/useAppStore'
 import Lenis from '@studio-freight/lenis'
-import AnimatedCursor from '~/components/AnimatedCursor'
+// import AnimatedCursor from '~/components/AnimatedCursor'
 import { useSplashScreen } from './hooks/useSplashScreen'
 import SplashScreen from './components/SplashScreen'
 
@@ -70,7 +70,7 @@ function App() {
 
     return (
         <>
-            <AnimatedCursor scrollY={scrollY} />
+            {/* <AnimatedCursor scrollY={scrollY} /> */}
             <div ref={scrollRef} id="scroll-container">
                 <SplashScreen isLoading={isLoading} onLoadingComplete={handleLoadingComplete} />
                 {element}

@@ -1,0 +1,31 @@
+.circle {
+  position: relative;
+  border-radius: 50%;
+  animation: spin 10s linear infinite;
+  width: fit-content;
+  left: 10%;
+  bottom: 20%;
+}
+
+.circle span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: 0 0;
+}
+
+.char {
+  display: inline-block;
+  transform: rotate(-90deg); /* Giữ chữ đứng yên */
+  font-size: 1.3rem;
+  color: white;
+  font-family: sans-serif;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

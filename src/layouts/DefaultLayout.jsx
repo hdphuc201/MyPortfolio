@@ -1,12 +1,13 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Footer from '~/components/Footer';
-import Header from '~/components/Header';
+import Header from '~/components/layout/Header';
 
 const DefaultLayout = () => {
     return (
         <>
-            <Header />
+            <div className="fixed top-0 left-0 w-full z-[1]">
+                <Header />
+            </div>
             <Outlet />
         </>
     );

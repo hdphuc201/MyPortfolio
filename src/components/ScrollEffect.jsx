@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useScrollAnimation } from '~/hooks/useScrollAnimation';
 
 export const FadeInSection = ({
@@ -53,7 +53,7 @@ export const StaggeredReveal = ({
 
   return (
     <div ref={elementRef} className={className}>
-      {React.Children.map(children, (child, index) => (
+      {children.map((child, index) => (
         <div
           className={`transition-all ${itemClassName}`}
           style={{
@@ -77,9 +77,9 @@ export const ScrollProgress = ({
   height = 4,
   zIndex = 50,
 }) => {
-  const [scrollProgress, setScrollProgress] = React.useState(0);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
       const currentScroll = window.scrollY;

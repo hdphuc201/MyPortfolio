@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
+
 function Header() {
 
     const [timer, setTimer] = useState(new Date().toLocaleTimeString());
@@ -14,7 +15,7 @@ function Header() {
 
 
     return (
-        <header className="flex items-center justify-between p-4 bg-[#000] text-white h-[70px] px-20 pt-10">
+        <header className="flex items-center justify-between p-4 bg-[#0D1117] text-white h-[70px] px-20 pt-10  ">
             <div className="logo text-5xl font-bold">PHUC HUYNH</div>
             {/* <div className="hambuger cursor-pointer h-full flex-col flex justify-center items-center gap-3">
                 <div className="w-[8rem] border-b-2 border-[#fff] h-[3px] bg-[#fff]"></div>
@@ -23,6 +24,9 @@ function Header() {
             <div className="time text-5xl font-bold">
                 {timer}
             </div>
+            {/* <div className="contact hidden md:block text-5xl font-bold">
+                Contact
+            </div> */}
         </header>
     )
 }
