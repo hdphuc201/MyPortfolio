@@ -1,7 +1,4 @@
 import React, { useState } from 'react'
-import EffectSection from '../EffectSection'
-import { AnimatePresence } from 'framer-motion'
-import React, { useState, useEffect, useRef } from 'react'
 import EffectSection from '~/components/EffectSection'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Skills } from '~/config/mockData'

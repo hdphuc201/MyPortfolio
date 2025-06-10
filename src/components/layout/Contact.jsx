@@ -3,6 +3,7 @@ import { GradientText } from '~/components/TextEffect'
 import { FadeInSection } from '~/components/ScrollEffect'
 import { MouseParallax } from '~/components/ParallaxEffect'
 import { Github, Linkedin, Facebook, Mail } from 'lucide-react'
+import { ButtonGlow } from '../HoverEffect'
 
 
 const Contact = () => {

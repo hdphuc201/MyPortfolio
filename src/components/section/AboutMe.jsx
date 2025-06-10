@@ -5,15 +5,17 @@ import EffectSection from '../EffectSection'
 import { FadeInSection } from '../ScrollEffect'
 
 const AboutMe = () => {
-
     const handleDownload = (item) => {
         const filePath =
             item.type == 'en'
-                ? '/assets/files/HuynhDuyPhuc_FrontendDeveloper_CV.pdf'
-                : '/assets/files/HuynhDuyPhuc_FrontendDeveloper_CV_VN.pdf'
+                ? '/public/files/HuynhDuyPhuc_FrontendDeveloper_CV.pdf'
+                : '/public/files/HuynhDuyPhuc_FrontendDeveloper_CV_VN.pdf'
 
         fetch(filePath)
-            .then((response) => response.blob()) // Chuyển đổi tệp thành Blob
+            .then((response) => {
+                console.log(' response.blob()', response)
+                return response.blob()
+            }) // Chuyển đổi tệp thành Blob
             .then((blob) => {
                 const url = window.URL.createObjectURL(blob)
 

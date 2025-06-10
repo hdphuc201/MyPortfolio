@@ -12,14 +12,23 @@ const projects = [
         description:
             'Developed a full-stack e-commerce platform with responsive UI and real-time backend integration. Implemented an admin dashboard with user, product, order, and discount management.',
         image: '/image/ecommerce.jfif',
+        admin: 'https://hdpstore-admin.vercel.app/',
         url: 'https://hdpstore.vercel.app/',
-        tags: ['ReactJS', 'Zustand', 'TailwindCSS', 'Mongodb', 'Nodejs']
+        tags: ['ReactJS', 'Zustand', 'TailwindCSS', 'Mongoose', 'Nodejs', 'ExpressJs']
+    },
+    {
+        title: 'Trello',
+        description:
+            'Built full CRUD board/column/card with real-time drag & drop sync using DnD Kit and Socket.IO Implemented JWT auth with cookie-based session REST APIs with Express & MongoDB Designed responsive UI with dark/light theme using MUI  ',
+        image: '/image/trello.png',
+        url: 'https://hdphuc-trello.vercel.app/',
+        tags: ['ReactJS', 'Redux Toolkit', 'Material UI', 'Mongodb', 'Nodejs', 'ExpressJs']
     },
     {
         title: 'Bna&Solution - Freelance',
         description:
             'Developed a product, user, and order management system, improving customer UX. Collaborated with clients to customize UI based on requirements',
-        image: '/image/bna.webp',
+        image: '/image/bna-1.webp',
         url: 'https://bnasolutions.com.vn/',
         tags: ['ReactJS', 'Zustand', 'TailwindCSS']
     },
@@ -35,7 +44,7 @@ const projects = [
         title: 'Kymco',
         description:
             'Designed an attractive and responsive user interface. Created smooth and innovative interactive effects.',
-        image: '/image/kymco.png',
+        image: '/image/kymco.jpg',
         url: 'https://kymco.vercel.app/',
         tags: ['HTML', 'Sass', 'Jquery', 'GSAP', 'AOS', 'Photoshop']
     }
@@ -134,7 +143,7 @@ export default function ProjectsSlider() {
                                 <motion.button
                                     key={index}
                                     onClick={() => handleThumbnailClick(index)}
-                                    className={`w-14 h-14 md:w-20 md:h-20 rounded-full overflow-hidden border-2 transition-all ${
+                                    className={`w-20 h-20 md:w-20 md:h-20 rounded-full overflow-hidden border-2 transition-all ${
                                         index === activeIndex
                                             ? 'border-[#a67c52] scale-110 z-20'
                                             : 'border-gray-300 opacity-60 hover:opacity-100'
@@ -149,7 +158,6 @@ export default function ProjectsSlider() {
                                         alt={project.title}
                                         className="w-full h-full object-cover"
                                     />
-                                    aasda
                                 </motion.button>
                                 <motion.div
                                     className="h-40 w-[1px] bg-[#a67c52] mt-4"
@@ -195,7 +203,7 @@ export default function ProjectsSlider() {
                                                 className="w-full h-full object-cover rounded-lg"
                                                 style={{
                                                     boxShadow: '0px 25px 50px -12px rgba(0, 0, 0, 0.25)',
-                                                    maxHeight: '600px'
+                                                    maxHeight: '550px'
                                                 }}
                                             />
                                         </motion.div>
@@ -246,23 +254,21 @@ export default function ProjectsSlider() {
                         ))}
                     </motion.div>
                     <motion.div
-                        className=" flex justify-center gap-2 mt-10"
+                        className=" flex flex-col items-center justify-center gap-3 mt-10"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.3, duration: 0.5 }}
                     >
-                        <Link
-                            to={projects[activeIndex].url}
-                            target="_blank"
-                            className="flex items-center gap-2"
-                        >
+                        <Link to={projects[activeIndex].url} target="_blank" className="flex items-center gap-2">
                             View Project
-                            <img
-                                src="/image/icon-scroll.svg"
-                                alt=""
-                                className="w-[20px] h-[20px] "
-                            />
+                            <img src="/image/icon-scroll.svg" alt="" className="w-[20px] h-[20px] " />
                         </Link>
+                        {projects[activeIndex].admin && (
+                            <Link to={projects[activeIndex].admin} target="_blank" className="flex items-center gap-2">
+                                View Admin
+                                <img src="/image/icon-scroll.svg" alt="" className="w-[20px] h-[20px] " />
+                            </Link>
+                        )}
                     </motion.div>
                 </motion.div>
             </AnimatePresence>
