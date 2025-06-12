@@ -8,30 +8,28 @@ const AboutMe = () => {
     const handleDownload = (item) => {
         const filePath =
             item.type == 'en'
-                ? '/public/files/HuynhDuyPhuc_FrontendDeveloper_CV.pdf'
-                : '/public/files/HuynhDuyPhuc_FrontendDeveloper_CV_VN.pdf'
+                ? '/files/HuynhDuyPhuc_FrontendDeveloper_CV.pdf'
+                : '/files/HuynhDuyPhuc_FrontendDeveloper_CV_VN.pdf'
 
         fetch(filePath)
-            .then((response) => {
-                console.log(' response.blob()', response)
-                return response.blob()
-            }) // Chuyển đổi tệp thành Blob
+            .then((response) => response.blob())
             .then((blob) => {
                 const url = window.URL.createObjectURL(blob)
-
                 const link = document.createElement('a')
                 link.href = url
-                link.download = 'HuynhDuyPhuc_CV_FrontendDeveloper.pdf' // Tên file khi tải về
+                link.download =
+                    item.type === 'en'
+                        ? 'HuynhDuyPhuc_CV_FrontendDeveloper_EN.pdf'
+                        : 'HuynhDuyPhuc_CV_FrontendDeveloper_VN.pdf'
                 link.style.display = 'none'
                 document.body.appendChild(link)
-
                 link.click()
-
                 document.body.removeChild(link)
                 window.URL.revokeObjectURL(url)
             })
             .catch((error) => console.error('File download error:', error))
     }
+
     return (
         <EffectSection title="About Me" className="py-16 md:py-24 text-[20px] z-[-1]">
             <FadeInSection direction="up">
