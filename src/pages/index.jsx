@@ -1,4 +1,4 @@
-import React, {useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { Tilt } from 'react-tilt'
@@ -6,11 +6,12 @@ import RotatingTextCircle from '~/components/RotatingTextCircle'
 import ProjectsSlider from '~/components/section/ProjectsSlider'
 import ScrollProgressBar from '~/components/ScrollProgressBar'
 import Footer from '~/components/layout/Footer'
-import './index.css'
 import SocialMedia from '~/components/section/SocialMedia'
 import AboutMe from '~/components/section/AboutMe'
 import TechnicalSkills from '~/components/section/TechnicalSkills'
 import Contact from '~/components/layout/Contact'
+import Experience from '~/components/section/Experience'
+import './index.css'
 
 const Index = () => {
     const sectionRef = useRef(null)
@@ -156,7 +157,7 @@ const Index = () => {
                                                 }}
                                             >
                                                 <img
-                                                    src="/image/avatar.jpg"
+                                                    src="/image/avatar.png"
                                                     alt="Avatar"
                                                     style={{
                                                         width: '100%',
@@ -190,6 +191,7 @@ const Index = () => {
                         <section ref={sectionRef} className="aboutme text-left text-[#dbdada] bg-[#161B22]">
                             <AboutMe />
                             <TechnicalSkills />
+                            <Experience />
                             <ProjectsSlider />
                             <Contact />
                         </section>

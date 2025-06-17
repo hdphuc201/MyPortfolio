@@ -1,65 +1,56 @@
-import React, { useState } from 'react'
-import EffectSection from '~/components/EffectSection'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Skills } from '~/config/mockData'
-
+import { motion } from 'framer-motion'
+import { skills } from '~/config/mockData'
 
 const TechnicalSkills = () => {
-    const categories = Object.keys(Skills)
-    const [tab, setTab] = useState('Frontend')
-
-
     return (
-        <EffectSection title="Technical Skills" className=" py-16 md:py-24 text-[20px]">
-            <div className="text-white px-4">
-                <div className="relative w-fit mx-auto mb-10 ">
-                    <div className="flex gap-8 border-b border-[#444] flex-col md:flex-row">
-                        {categories.map((cat) => (
-                            <button
-                                key={cat}
-                                onClick={() => setTab(cat)}
-                                className={`relative pb-2 text-[30px] transition-all duration-300 font-semibold 
-                                  ${tab === cat ? 'text-[#e6d6c2]' : 'text-gray-400 hover:text-[#a67c52]'}
-                                `}
-                            >
-                                {cat}
-                                {tab === cat && (
-                                    <motion.div
-                                        layoutId="underline"
-                                        className="absolute -bottom-[1px] left-0 h-[3px] w-full bg-gradient-to-r from-[#e6d6c2] to-[#a67c52] rounded-full"
-                                    />
-                                )}
-                            </button>
-                        ))}
-                    </div>
+        <section className="relative z-10 py-20 px-4  mb-16">
+            <div className="max-w-full mx-auto">
+                {/* Header */}
+                <div className="text-center mb-16 ">
+                    <h2 className="text-6xl !text-[#dbdada] md:text-7xl lg:text-8xl font-bold bg-gradient-to-r bg-clip-text text-transparent mb-6">
+                        Skills
+                    </h2>
+                    <div className="w-24 h-1 bg-[#dbdada] mx-auto rounded-full mb-6"></div>
+                    <p className="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto">
+                        Technologies I work with to bring ideas to life
+                    </p>
                 </div>
-                <AnimatePresence mode="wait">
-                    <div className="h-full md:h-[300px]">
+
+                {/* Skills Grid */}
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                    {skills.map((skill, index) => (
                         <motion.div
-                            key={tab}
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -30 }}
-                            transition={{ duration: 0.4 }}
-                            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto "
+                            key={skill.name}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: index * 0.1, duration: 0.5 }}
+                            viewport={{ once: true }}
+                            className="group"
                         >
-                            {Skills[tab].map((skill, i) => (
-                                <motion.div
-                                    key={skill.name}
-                                    className="bg-[#111] p-8  rounded-xl shadow-md flex items-center gap-4 hover:scale-[1.03] transition-transform duration-300"
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: i * 0.1 }}
-                                >
-                                    <div className="text-4xl">{skill.icon}</div>
-                                    <div className="text-3xl font-medium">{skill.name}</div>
-                                </motion.div>
-                            ))}
+                            <div className="relative bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-6 hover:border-gray-600 transition-all duration-300 hover:scale-105 hover:bg-gray-800/50">
+                                {/* Skill Icon */}
+                                <div className="flex flex-col items-center text-center">
+                                    <div
+                                        className="text-8xl mb-4 transition-all duration-300 group-hover:scale-110"
+                                        style={{ color: skill.color }}
+                                    >
+                                        {skill.icon}
+                                    </div>
+                                    <h3 className="text-white font-semibold text-[16px] mb-1">{skill.name}</h3>
+                                    <span className="text-gray-500 text-sm">{skill.category}</span>
+                                </div>
+
+                                {/* Hover Glow Effect */}
+                                <div
+                                    className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl"
+                                    style={{ backgroundColor: skill.color }}
+                                ></div>
+                            </div>
                         </motion.div>
-                    </div>
-                </AnimatePresence>
+                    ))}
+                </div>
             </div>
-        </EffectSection>
+        </section>
     )
 }
 
