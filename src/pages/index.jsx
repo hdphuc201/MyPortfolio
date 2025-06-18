@@ -157,7 +157,7 @@ const Index = () => {
                                                 }}
                                             >
                                                 <img
-                                                    src="/image/avatar.png"
+                                                    src="/image/avatar.jpg"
                                                     alt="Avatar"
                                                     style={{
                                                         width: '100%',
