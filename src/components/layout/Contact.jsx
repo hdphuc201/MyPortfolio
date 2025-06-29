@@ -133,7 +133,7 @@ const Contact = () => {
                                             <Facebook className="w-8 h-8" />
                                         </a>
                                         <a
-                                            href="https://github.com/HuynhDuyPhuc201"
+                                            href="https://github.com/hdphuc201"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="hover:text-[#e6d6c2] transition-colors"

@@ -6,7 +6,6 @@ const Projects = () => {
     return (
         <section className="relative z-10 py-20 px-4">
             <div className="max-w-7xl mx-auto">
-                {/* Header */}
 
                 <div className="text-center mb-16">
                     <h2 className="text-6xl !text-[#dbdada] md:text-7xl lg:text-8xl font-bold bg-gradient-to-r bg-clip-text text-transparent mb-6">
@@ -17,7 +16,6 @@ const Projects = () => {
                         A showcase of my recent work and personal projects
                     </p>
                 </div>
-                {/* Featured Projects */}
                 <div className="mb-16">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {projects
@@ -106,11 +104,10 @@ const Projects = () => {
                     </div>
                 </div>
 
-                {/* Call to Action */}
                 <div className="text-center mt-16">
                     <p className="text-xl text-gray-400 mb-6">Want to see more of my work?</p>
                     <motion.a
-                        href="https://github.com/HuynhDuyPhuc201"
+                        href="https://github.com/hdphuc201"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-2xl font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"

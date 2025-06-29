@@ -25,7 +25,7 @@ export const Skills = {
         { name: 'jQuery', icon: <SiJquery color="#0769AD" /> },
         { name: 'ReactJS', icon: <FaReact color="#61DAFB" /> },
         { name: 'Redux', icon: <SiRedux color="#764ABC" /> },
-        { name: 'Redux Toolkit', icon: <SiRedux color="#764ABC" /> }, // Redux Toolkit sử dụng cùng biểu tượng với Redux
+        { name: 'Redux Toolkit', icon: <SiRedux color="#764ABC" /> }, 
         { name: 'React Query', icon: <SiReactquery color="#FF4154" /> },
         { name: 'Ant Design', icon: <SiAntdesign color="#0170FE" /> },
         { name: 'TailwindCSS', icon: <SiTailwindcss color="#38B2AC" /> },
@@ -40,9 +40,9 @@ export const Skills = {
         { name: 'Git', icon: <FaGitAlt color="#F05032" /> },
         { name: 'Photoshop', icon: <SiAdobephotoshop color="#31A8FF" /> },
         { name: 'Figma', icon: <FaFigma color="#F24E1E" /> },
-        { name: 'GSAP', icon: <MdAnimation color="#88CE02" /> }, // Sử dụng biểu tượng animation để đại diện cho GSAP
-        { name: 'CI/CD', icon: <SiGnubash color="#4EAA25" /> }, // Sử dụng biểu tượng Bash để đại diện cho CI/CD
-        { name: 'NPM', icon: <FaNpm color="#CB3837" /> } // Thêm NPM vào danh sách công cụ
+        { name: 'GSAP', icon: <MdAnimation color="#88CE02" /> },
+        { name: 'CI/CD', icon: <SiGnubash color="#4EAA25" /> },
+        { name: 'NPM', icon: <FaNpm color="#CB3837" /> } 
     ]
 }
 export const fileCV = [
@@ -51,11 +51,6 @@ export const fileCV = [
         text: 'Resume',
         id: 1
     },
-    // {
-    //     type: 'vn',
-    //     id: 2,
-    //     text: '#e6d6c2 Vietnamese'
-    // }
 ]
 
 export const information = [
@@ -68,7 +63,7 @@ export const information = [
         icon: <Facebook/>
     },
     {
-        href: 'https://github.com/HuynhDuyPhuc201',
+        href: 'https://github.com/hdphuc201',
         icon: <Github/>
     }
 ]
@@ -83,7 +78,7 @@ export const projects = [
         image: '/image/trello.png',
         technologies: ['ReactJS', 'Redux Toolkit', 'MUI', 'DnD Kit', 'Socket.IO', 'NodeJS', 'MongoDB', 'ExpressJS'],
         liveUrl: 'https://hdphuc-trello.vercel.app',
-        githubUrl: 'https://github.com/HuynhDuyPhuc201/trello-fe',
+        githubUrl: 'https://github.com/hdphuc201/trello-fe',
         featured: true
     },
     {
@@ -105,31 +100,9 @@ export const projects = [
         technologies: ['ReactJS', 'Zustand', 'TailwindCSS', 'NodeJS', 'MongoDB', 'Mongoose', 'ExpressJS'],
         liveUrl: 'https://hdpstore.vercel.app',
         admin: 'https://hdpstore-admin.vercel.app/',
-        githubUrl: 'https://github.com/HuynhDuyPhuc201/ecommerce-fe',
+        githubUrl: 'https://github.com/hdphuc201/ecommerce-fe',
         featured: true
     },
-    {
-        id: 4,
-        title: 'Personal Website Portfolio',
-        description:
-            'A responsive and animated portfolio to showcase personal projects, skills, and contact info. Used GSAP and React-Tilt for animation.',
-        image: '/image/porfolio.jpg',
-        technologies: ['ReactJS', 'Zustand', 'TailwindCSS', 'GSAP', 'React-Tilt', 'Framer Motion'],
-        liveUrl: 'https://phucfedev.vercel.app',
-        githubUrl: 'https://github.com/yourusername/portfolio',
-        featured: false
-    },
-    {
-        id: 4,
-        title: 'Personal Website Portfolio',
-        description:
-            'A responsive and animated portfolio to showcase personal projects, skills, and contact info. Used GSAP and React-Tilt for animation.',
-        image: '/image/porfolio.jpg',
-        technologies: ['ReactJS', 'Zustand', 'TailwindCSS', 'GSAP', 'React-Tilt', 'Framer Motion'],
-        liveUrl: 'https://phucfedev.vercel.app',
-        githubUrl: 'https://github.com/yourusername/portfolio',
-        featured: false
-    }
 ]
 
 

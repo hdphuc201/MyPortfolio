@@ -16,7 +16,7 @@
 
 .char {
   display: inline-block;
-  transform: rotate(-90deg); /* Giữ chữ đứng yên */
+  transform: rotate(-90deg); 
   font-size: 1.3rem;
   color: white;
   font-family: sans-serif;

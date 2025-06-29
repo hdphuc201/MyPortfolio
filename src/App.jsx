@@ -1,13 +1,11 @@
-// ✅ Lenis Scroll Integration with Custom Cursor - React Version
-
 import { useRoutes } from 'react-router-dom'
 import routers from './router'
-import { Suspense, useEffect, useRef, useState } from 'react'
+import {useEffect, useRef, useState } from 'react'
 import './index.css'
-import useAppStore from './store/useAppStore'
 import Lenis from '@studio-freight/lenis'
 import { useSplashScreen } from './hooks/useSplashScreen'
 import SplashScreen from './components/SplashScreen'
+import useAppStore from './store/useAppStore'
 
 function App() {
     const element = useRoutes(routers)
